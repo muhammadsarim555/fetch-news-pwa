@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>App</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../manifset.json">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light">
+    
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../index.html">News Api 1</a>
+            </div>
+        <div class="navbar-header">
+            <div id="button">
+                <ul class="navbar-nav roww">
+                    <li class="nav-item">
+                      <a class="nav-link navbar-brand" href="api2.html">Api 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-brand" href="api3.html">Api 3</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link navbar-brand" href="api4.html">Api 4</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link navbar-brand" href="api5.html">Api 5</a>
+                      </li>
+                 
+              </ul>
+            </div>
+        </div>
+            <!-- <form class="navbar-form navbar-right" action="">
+                <div class="form-group">
+                        <select class="form-control" name="" id="selector"></select>
+                        
+                </div>
+            </form> -->
+        </div>
+    </nav>    
+</nav>
+    
+    <div class="container" id="div">
+        </div>
+
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('../service_worker.js')
+                .then(function () {
+                    console.log('Service Worker Registered');
+                });
+        }
+    </script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../api_js/api5.js"></script>
+</body>
+</html>
