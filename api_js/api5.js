@@ -24,6 +24,31 @@ window.addEventListener('load', async e => {
 async function updatedNews (source = defineDefault) {
     const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apikey}`)
     const json = await res.json();
+    var imagesArray = [];
+    for (let key in json.articles) {
+        imagesArray.push(json.articles[key].urlToImage)
+    }
+    console.log(imagesArray, "Imagess")
+    var flag = 0;
+    var timer;
+    console.log(imagesArray[3])
+    document.getElementById('img').style.backgroundImage = "url(" +imagesArray[3]+")"
+    function images(){
+        if (flag === imagesArray.length) {
+            flag = 0
+            console.log(flag, 'flag if')
+            document.getElementById('img').style.backgroundImage = "url(" +imagesArray[flag]+")"
+        }    
+        else{
+            document.getElementById('img').style.backgroundImage = "url(" +imagesArray[flag]+")"
+            console.log(flag , 'flag else')
+        }
+    }
+    
+    timer = setInterval(() => {
+        flag++
+        images()
+     }, 3000)
     console.log(json)
     main.innerHTML = json.articles.map(createArticles).join('\n')
 }
